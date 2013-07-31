@@ -1,0 +1,418 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Deutsch (Deutschland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_HIGHTMAPGL          ICON                    "hight map gl.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_HIGHTMAPGL MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open",                       ID_DATEI_OPEN
+        MENUITEM "S&ettings",                   ID_DATA_SETTINGS
+        MENUITEM "&Exit",                       IDM_EXIT
+    END
+    POPUP "Data"
+    BEGIN
+        POPUP "All"
+        BEGIN
+            MENUITEM "Count All",                   ID_DATA_COUNT_ALL
+            MENUITEM "Save all Data",               ID_ALL_SAVEALLDATA
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Info...",                    IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_HIGHTMAPGL ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Info über hight map gl"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            128,IDC_STATIC,7,18,20,20
+    LTEXT           "Spot Counter, Version 1.0",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2011",IDC_STATIC,39,28,114,8
+    DEFPUSHBUTTON   "OK",IDOK,113,36,50,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "hight map gl"
+    IDC_MENU_DATA_1         "first entery in the Data Menu"
+    IDC_HIGHTMAPGL          "HIGHTMAPGL"
+END
+
+#endif    // Deutsch (Deutschland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Englisch (USA) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_SPOT_DISPLAY_MENU MENU 
+BEGIN
+    POPUP "Display"
+    BEGIN
+        MENUITEM "Countet Spots",               ID_DISPLAY_COUNTETSPOTS32789
+        MENUITEM "Mask",                        ID_DISPLAY_MASK32790, CHECKED
+        MENUITEM "3D",                          ID_DISPLAY_3D
+    END
+    POPUP "Data"
+    BEGIN
+        MENUITEM "Spots Info",                  ID_DATA_SPOTSINFO32791
+        MENUITEM "Spot info",                   ID_DATA_SPOTINFO32792
+        MENUITEM "Image Settings",              ID_DATA_IMAGE_SETTINGS
+    END
+    POPUP "Save"
+    BEGIN
+        MENUITEM "All Heights",                 ID_SAVE_HEIGHTS
+        MENUITEM "Aktive Heights",              ID_SAVE_AKTIVEHEIGHTS
+        MENUITEM "All Areas",                   ID_SAVE_ALLAREAS
+        MENUITEM "Aktive Areas",                ID_SAVE_AKTIVEAREAS
+    END
+END
+
+IDR_HISTOGRAMM_MENU MENU 
+BEGIN
+    POPUP "Data"
+    BEGIN
+        MENUITEM "Settings",                    ID_DATA_HISTOGRAMMSETTING
+    END
+END
+
+IDR_AREAHEIGHT_MENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Settings",                    ID_FILE_AREAHEIGHT_SETTINGS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETTINGS DIALOGEX 0, 0, 104, 113
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_SETTINGS_HIGHT,55,15,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SETTINGS_SURROUNDING,57,68,29,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "cut off hight",IDC_STATIC,7,18,40,8
+    LTEXT           "surrounding",IDC_STATIC,7,71,39,8
+    PUSHBUTTON      "Set",IDC_SETTINGS_SET,16,85,30,14
+    PUSHBUTTON      "Close",IDC_SETTINGS_CLOSE,52,85,34,14
+    LTEXT           "nm",IDC_STATIC,87,21,10,8
+    LTEXT           "px",IDC_STATIC,88,71,9,8
+    LTEXT           "minimum height",IDC_STATIC,7,37,50,8
+    LTEXT           "minimum area",IDC_STATIC,7,55,44,8
+    EDITTEXT        IDC_SETTINGS_MIN_HIGHT,56,33,29,14,ES_AUTOHSCROLL
+    LTEXT           "nm",IDC_STATIC,87,36,10,8
+    LTEXT           "px",IDC_STATIC,88,54,9,8
+    EDITTEXT        IDC_SETTINGS_MIN_AREA,57,51,29,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_SPOTS_INFO DIALOGEX 0, 0, 120, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Spots Info"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,77,108,36,14
+    LTEXT           "Countet Spots",IDC_STATIC,7,14,47,8
+    LTEXT           "Active Spots",IDC_STATIC,7,31,41,8
+    LTEXT           "Average Height",IDC_STATIC,7,46,51,8
+    LTEXT           "Average Area",IDC_STATIC,7,60,46,8
+    LTEXT           "",IDC_SPOT_INFO_AVeRIGE_HIGHT,65,44,48,8
+    LTEXT           "",IDC_SPOT_INFO_AKTIV_SPOTS,60,30,53,8
+    LTEXT           "",IDC_SPOT_INFO_AVeRIGE_AREA,63,60,50,8
+    LTEXT           "",IDC_SPOT_INFO_COUNTED_SPOTS,62,15,51,8
+    PUSHBUTTON      "Update",IDC_SPOTINFO_UPDATE,7,108,37,14
+    LTEXT           "Volume",IDC_STATIC,7,76,24,8
+    LTEXT           "",IDC_SPOTSINFO_VOLUM,60,76,53,8
+    LTEXT           "Reduced Volume",IDC_STATIC,7,91,54,8
+    LTEXT           "",IDC_REDUCEDVOLME,66,90,47,8
+    LTEXT           "",IDC_CAPTION,7,1,106,8
+END
+
+IDD_SPOTINFO DIALOGEX 0, 0, 84, 83
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Spot Info"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,45,60,32,14
+    PUSHBUTTON      "Update",IDC_SPOTINFO_UPDATE,7,60,34,14
+    LTEXT           "ID",IDC_STATIC,7,17,8,8
+    LTEXT           "Height",IDC_STATIC,7,32,22,8
+    LTEXT           "Area",IDC_STATIC,7,45,16,8
+    LTEXT           "",IDC_SPOTINFO_ID,35,18,42,8
+    LTEXT           "",IDC_SPOTINFO_HIGHT,35,31,42,8
+    LTEXT           "",IDC_SPOTINFO_AREA,35,45,42,8
+    LTEXT           "",IDC_CAPTION,7,7,70,8
+END
+
+IDD_IMAGE_SETTINGS DIALOGEX 0, 0, 101, 98
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Image Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Set",IDOK,7,72,32,14
+    PUSHBUTTON      "Close",IDCANCEL,49,72,30,14
+    LTEXT           "Range:",IDC_STATIC,7,21,24,8
+    LTEXT           "Offset:",IDC_STATIC,7,37,24,8
+    EDITTEXT        IDC_RANGE,43,17,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OFFSET,43,34,40,14,ES_AUTOHSCROLL
+    LTEXT           "nm",IDC_STATIC,84,20,10,8
+    LTEXT           "nm",IDC_STATIC,86,36,8,8
+    LTEXT           "",IDC_CAPTION,7,7,87,9
+    EDITTEXT        IDC_3D_RANGE,44,49,40,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC,86,51,8,8
+    LTEXT           "3D Range:",IDC_STATIC,7,51,35,8
+END
+
+IDD_HISTOGRAMMSETTINGS DIALOGEX 0, 0, 127, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Set",IDOK,7,96,50,14
+    PUSHBUTTON      "Close",IDCANCEL,70,96,50,14
+    EDITTEXT        IDC_BIN_NUMBER,63,30,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXIMUM_HEIGHT,63,61,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINIMUM_HEIGHT,63,46,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YRANGE,63,77,40,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_CAPTION,7,14,113,8
+    LTEXT           "number of bins",IDC_STATIC,7,33,52,8
+    LTEXT           "Minimum height",IDC_STATIC,7,50,53,8
+    LTEXT           "maximum height",IDC_STATIC,7,68,52,8
+    LTEXT           "Y-Range",IDC_STATIC,7,81,30,8
+    LTEXT           "nm",IDC_STATIC,110,50,10,8
+    LTEXT           "nm",IDC_STATIC,110,65,10,8
+END
+
+IDD_AREAHEIGHT_SETTINGS DIALOGEX 0, 0, 143, 139
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Set",IDOK,16,111,50,14
+    PUSHBUTTON      "Close",IDCANCEL,74,110,50,14
+    EDITTEXT        IDC_AREAHEIGHT_MAX_HEIGHT,75,20,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AREAHEIGHT_MIN_HEIGHT,75,36,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AREAHEIGHT_MAX_AREA,76,50,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AEAHEIGHT_MIN_AREA,76,65,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AREAHEIGHT_FIT_AREA,76,79,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AREAHEIGHT_ERROR_MULTIPLIER,76,93,40,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_CAPTION,7,7,129,8
+    LTEXT           "Maximal plot height:",IDC_STATIC,7,23,65,8
+    LTEXT           "Minimal plot height: ",IDC_STATIC,7,37,64,8
+    LTEXT           "Maximal plot area: ",IDC_STATIC,7,52,62,8
+    LTEXT           "nm",IDC_STATIC,118,23,10,8
+    LTEXT           "nm",IDC_STATIC,117,38,10,8
+    LTEXT           "pixel",IDC_STATIC,117,53,16,8
+    LTEXT           "pixel",IDC_STATIC,118,68,16,8
+    LTEXT           "pixel",IDC_STATIC,117,81,16,8
+    LTEXT           "Minimal plot area",IDC_STATIC,7,67,54,8
+    LTEXT           "cut of area for fit",IDC_STATIC,7,82,56,8
+    LTEXT           "error multiplier",IDC_STATIC,7,97,47,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 97
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_SPOTS_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_SPOTINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 77
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_IMAGE_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 94
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_HISTOGRAMMSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 120
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_AREAHEIGHT_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 136
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Englisch (USA) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
