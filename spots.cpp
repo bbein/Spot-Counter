@@ -686,9 +686,10 @@ bool Spots::Get_Data_Loaded(void) {
 	return this->Data_Loaded;
 }
 //returns a pointer to a copy of the path where the file is saved
-void Spots::Get_Path(wchar_t* target) {
-	target = new wchar_t(wcslen(this->Path)+1);
+wchar_t* Spots::Get_Path() {
+	wchar_t* target = new wchar_t[wcslen(this->Path)+1];
 	wcscpy_s(target,wcslen(this->Path)+1,this->Path);
+	return target;
 }
 //Sets the path where the loaded file is saved
 void Spots::Set_Path(wchar_t * Path) {
@@ -699,8 +700,8 @@ void Spots::Set_Path(wchar_t * Path) {
 	}*/
 	if (this->Path) delete this->Path;
 	int length = wcslen(Path)+1;
-	this->Path = new wchar_t(length);
-	wcscpy_s(this->Path,wcslen(Path)+10, Path);	
+	this->Path = new wchar_t[length];
+	wcscpy_s(this->Path,wcslen(Path)+1, Path);	
 }
 
 //Returns the Spots_Counted variable
@@ -709,7 +710,9 @@ bool Spots::Get_Spots_Counted(void) {
 }
 
 wchar_t * Spots::Get_Filename(void) {
-	return this->Path;
+	wchar_t* target = new wchar_t[wcslen(this->Path)+1];
+	wcscpy_s(target,wcslen(this->Path)+1,this->Path);
+	return target;
 }
 
 ///////////////////

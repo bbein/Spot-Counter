@@ -265,8 +265,8 @@ LRESULT CALLBACK WndProcMain(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 					return 0;
 				case ID_DATEI_OPEN: {
 					if(!loadfile(Daten)) return 0;
+					
 					//add menu item
-
 					HMENU hMenu, hSubMenu, hSubSubMenu;
 					hMenu = GetMenu(hWnd);
 					hSubMenu = GetSubMenu(hMenu,1);

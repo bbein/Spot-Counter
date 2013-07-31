@@ -109,7 +109,7 @@ public:
 	bool Get_Data_Loaded(void);
 	bool Get_Spots_Counted(void);
 	RGBColor GetPixelColor(double range, double offset, int point, bool masked);
-	void Get_Path(wchar_t* target);
+	wchar_t * Get_Path();
 	wchar_t * Get_Filename();
 
 private:
