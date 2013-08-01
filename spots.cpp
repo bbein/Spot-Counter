@@ -712,6 +712,11 @@ bool Spots::Get_Spots_Counted(void) {
 wchar_t * Spots::Get_Filename(void) {
 	wchar_t* target = new wchar_t[wcslen(this->Path)+1];
 	wcscpy_s(target,wcslen(this->Path)+1,this->Path);
+	target = _tcsrchr(target,'\\'); //selects the Filename
+	wchar_t* cut = _tcsrchr(target,'.'); //selects the extension
+	*cut= 0; //replaces the extension with the termination of the string
+	wcscpy_s(target,wcslen(target)+1,target+1); //removes the fist character
+	//target += 1; //enhances the starting point of the pointer and cut's of the first charcter memory lack?
 	return target;
 }
 
